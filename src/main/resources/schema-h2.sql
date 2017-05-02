@@ -1,0 +1,6 @@
+CREATE TABLE BOOK
+(
+    id INT NOT NULL,
+    title VARCHAR2(255),
+    author VARCHAR2(255)
+);
