@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class BeanConfig {
+public class H2DBBeanConfig {
 
     @Bean
     ServletRegistrationBean h2servletRegistration(){
@@ -14,5 +14,4 @@ public class BeanConfig {
         registrationBean.addUrlMappings("/console/*");
         return registrationBean;
     }
-
 }

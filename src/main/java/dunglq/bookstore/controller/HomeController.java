@@ -19,7 +19,7 @@ public class HomeController {
     @RequestMapping(value = "/")
     public String home(Map<String, Object> model) {
         model.put("message", "welcome!");
-        List<Object> books = StreamSupport.stream(bookRepository.findAll().spliterator(), false)
+        List<Book> books = StreamSupport.stream(bookRepository.findAll().spliterator(), false)
                 .collect(Collectors.toList());
         return "home";
     }
