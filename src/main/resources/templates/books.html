@@ -1,0 +1,10 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <a href="/logout">Logout</a>
+        <h2>Welcome thymeleaf</h2>
+        <ul th:each="book : ${books}">
+            <li th:text="${book.title}"></li>
+        </ul>
+    </body>
+</html>
