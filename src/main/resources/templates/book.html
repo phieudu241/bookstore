@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <a href="/logout">Logout</a>
+        <form th:action="@{'/books/' + ${book.id} + '/update'}" method="post">
+            <div>
+                <span>Title</span>
+                <input type="text" name="title" th:value="${book.title}"/>
+            </div>
+            <div>
+                <span>Author</span>
+                <input type="text" name="author" th:value="${book.author}"/>
+            </div>
+            <div>
+                <span>Description</span>
+                <input type="text" name="description" th:value="${book.description}"/>
+            </div>
+            <div>
+                <input type="submit" value="Update"/>
+            </div>
+        </form>
+    </body>
+</html>

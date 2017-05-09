@@ -3,8 +3,30 @@
     <body>
         <a href="/logout">Logout</a>
         <h2>Welcome thymeleaf</h2>
-        <ul th:each="book : ${books}">
-            <li th:text="${book.title}"></li>
-        </ul>
+        <table>
+            <thead>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Action</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                <tr class="row" th:each="book : ${books}">
+                    <td>
+                        <span th:text="${book.title}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${book.author}"></span>
+                    </td>
+                    <td>
+                        <a th:href="@{'/books/' + ${book.id}}">Edit</a>
+                    </td>
+                    <td>
+                        <a th:href="@{'/books/' + ${book.id} + '/delete'}">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
     </body>
 </html>
